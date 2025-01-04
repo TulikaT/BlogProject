@@ -9,7 +9,7 @@ const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
-        login: (atate, action) => {
+        login: (state, action) => {
              state.satus = true
              state.userData = action.payload.userData
         },

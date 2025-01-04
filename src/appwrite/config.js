@@ -1,6 +1,6 @@
 // Service : Database Creation logic
 
-import conf from "../config/conf";
+import conf from "../config/conf.js";
 import { Client, ID, Databases, Storage, Query } from "appwrite";
 
 export class Service{
@@ -60,7 +60,7 @@ export class Service{
              await this.databases.deleteDocument(
              conf.appwriteDatabaseId,
              conf.appwriteCollectionId,
-             ID.unique() 
+             slug 
             )
 
             return true
@@ -134,4 +134,4 @@ export class Service{
 }
 
 const service = new Service()
-export default Service
+export default service
